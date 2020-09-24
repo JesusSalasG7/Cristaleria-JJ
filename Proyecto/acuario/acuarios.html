@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" href="stylesACU.css">
+	<link rel="stylesheet" href="../index/normalize.css">
+	<link rel="shortcut icon" href="../iconos/ventana.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Todos los Acuarios que necesites a su gusto">
+	<title>Acuarios</title>
+</head>
+<body>
+
+	<div class="contenedor">
+
+    <header>
+       <div class="wrapper">
+       		<div class="title">Acuarios</div>
+       </div>
+	</header>
+
+
+    <div class="contenedor-imagenes">
+		<div class="Pecera">
+			<a href="#img1">
+				<img src="./img/Pecera-Grande1.jpg">
+					<div class="overlay">
+					  <h3>Acuario Grande</h3>	
+				  </div>
+			</a>	  
+		</div>
+		
+		<div class="Pecera">
+			<a href="#img2.1">
+				<img src="./img/pecera1.jpg" alt="Pecera Pquequeña">
+					<div class="overlay">
+						<h3>Acuario chico</h3>
+					</div>
+			</a>
+		</div>
+    </div>
+    
+    <!--Pecera Grande-->
+    <div class="modal" id="img1">
+    	<a class="cerrar" href=""><img src="../iconos/cerrar.png"></a>
+    	<div class="imagen">
+    		<a href="#img3"><img class="flecha" src="../iconos/flecha-izquerda.png"></a>
+    		<a href="#img2"><img class="muestra" src="./img/Pecera-Grande1.jpg"></a>
+    		<a href="#img2"><img class="flecha" src="../iconos/flecha-derecha.png"></a>	
+    	</div>
+    </div>
+
+    <div class="modal" id="img2">
+    	<a class="cerrar" href=""><img src="../iconos/cerrar.png"></a>
+    	<div class="imagen">
+    		<a href="#img1"><img class="flecha" src="../iconos/flecha-izquerda.png"></a>
+    		<a href="#img3"><img class="muestra" src="./img/Pecera-Grande2.jpg"></a>
+    		<a href="#img3"><img class="flecha" src="../iconos/flecha-derecha.png"></a>	
+    	</div>
+    </div>
+
+    <div class="modal" id="img3">
+    	<a class="cerrar" href=""><img src="../iconos/cerrar.png"></a>
+    	<div class="imagen">
+    		<a href="#img2"><img class="flecha" src="../iconos/flecha-izquerda.png"></a>
+    		<a href="#img1"><img class="muestra" src="./img/Pecera-Grande3.jpg"></a>
+    		<a href="#img1"><img class="flecha" src="../iconos/flecha-derecha.png"></a>	
+    	</div>
+    </div>
+	
+    <!--Pecera Pqueqeuña-->
+ 	<div class="modal" id="img2.1">
+    	<a class="cerrar" href=""><img src="../iconos/cerrar.png"></a>
+    	<div class="imagen">
+    		<a href="#img2.3"><img class="flecha" src="../iconos/flecha-izquerda.png"></a>
+    		<a href="#img2.2"><img class="muestra" src="./img/pecera1.jpg"></a>
+    		<a href="#img2.2"><img class="flecha" src="../iconos/flecha-derecha.png"></a>	
+    	</div>
+    </div>
+
+    <div class="modal" id="img2.2">
+    	<a class="cerrar" href=""><img src="../iconos/cerrar.png"></a>
+    	<div class="imagen">
+    		<a href="#img2.1"><img class="flecha" src="../iconos/flecha-izquerda.png"></a>
+    		<a href="#img2.3"><img class="muestra" src="./img/pecera2.jpg"></a>
+    		<a href="#img2.3"><img class="flecha" src="../iconos/flecha-derecha.png"></a>	
+    	</div>
+    </div>
+
+    <div class="modal" id="img2.3">
+    	<a class="cerrar" href=""><img src="../iconos/cerrar.png"></a>
+    	<div class="imagen">
+    		<a href="#img2.2"><img class="flecha" src="../iconos/flecha-izquerda.png"></a>
+    		<a href="#img2.1"><img class="muestra" src="./img/pecera3.jpg"></a>
+    		<a href="#img2.1"><img class="flecha" src="../iconos/flecha-derecha.png"></a>	
+    	</div>
+    </div>
+
+	<div class="contenedor">
+		<a href="../index/index.html" class="volver">
+			<img class="flecha" src="../iconos/flecha-volver.png" alt="volver al menu">
+		</a>
+		<p class="description" >Volver a la página principal</p>
+	</div>
+		
+	
+	</div>
+</body>
+</html> 

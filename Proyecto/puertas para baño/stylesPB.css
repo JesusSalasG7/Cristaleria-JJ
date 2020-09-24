@@ -1,0 +1,247 @@
+* {
+    /* Esto es para especificar las propiedades del ancho y alto */
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'title';
+    src: url(../index/RussoOne-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'description';
+    src: url(../index/Kanit-LightItalic.ttf);
+}
+
+body {
+  background: #DFEFFA;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #224ab6;
+    margin-bottom: 20px;
+}
+
+.contenedor{
+   width: 100%;
+   max-width: 1000px;
+   padding: 0 25px;   
+   /*Esto es para centrar los elementos */
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+header .title{
+    font-family: 'title';
+    font-size: 50px;
+    line-height: 130px;
+    float: left;
+}
+
+.description{
+    padding: 0 30px;
+    font-family: 'description';
+    font-size: 25px;
+    overflow: hidden;
+    text-decoration: none;
+    color: black;
+  } 
+
+.contenedor-imagenes {
+    display: flex; 
+    width: 85%;
+    margin: auto; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+}
+
+.contenedor-imagenes .muestra{
+    /*Esto es para indicar el espacio de ancho de cada imagen */
+    width: 250px;
+    position: relative; 
+    /*Este es para indicar el espacio que se va a ocupar a lo alto de la imagen */
+    height: 310px;
+    /*Esto es par indicar el espacio del margen por la parte de abajo de cada imagen */
+    margin-bottom: 5px; 
+    /*Este indica la pequeña sombra que forma atras de la de imagen */
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.75);
+}
+
+.muestra img{
+    /*Este indica todo lo que van a ocupar las imagenes dentro de sus contenedores */
+    width: 100%;
+    height: 100%; 
+    /*Esto es para que cuadren bien las imagenes, es decir para que no se vean estiradas, si 
+    no que cuadren bien*/
+    object-fit: cover; 
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 118, 192, 0.781);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.overlay h3{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.muestra:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+}
+
+img{
+    object-fit: cover;
+}
+
+.modal {
+    display: none;
+}
+
+.modal:target {
+    display: block;
+    position: fixed;
+    background: rgba( 192, 227, 232,0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+.imagen {
+    width: 100%;
+    height: 50%;
+  
+    margin-top: 15%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagen .flecha{
+    text-decoration: none;
+    width: 90px;
+    height: 90px;
+    margin: 0 10px;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.flecha:hover {
+    background: #20638f;
+    border-radius: 50px;
+}
+
+.imagen .visualizar {
+    /*width: 500px;
+    height: 750px; */
+    width:  355px;
+    height: 470px;
+    max-width: 100%;
+    border: 5px solid #effdff;
+}
+
+.cerrar img{
+    position: fixed;
+     z-index: 50;
+    width: 60px;
+    height: 60px;
+    line-height: 48px;
+    right: 10px;
+    margin: 0 15px;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
+  
+  .cerrar img:hover{
+    background: #20638f;
+    border-radius: 50px;
+  }
+
+  .volver img{
+    width: 45px;
+    height: 45px;
+  }
+  
+  .volver {
+    margin-left: 70px;
+    float: left;
+    margin-bottom: 205px;
+  } 
+  
+  p {
+    width: 500px;
+    margin-top: 65px;
+}
+
+@media screen and (max-width: 800px){
+  .volver{
+    margin: 0;
+    float: left;
+    width: 10px;
+    height: 10px;
+  }
+
+  .volver img{
+    width: 40px;
+    height: 40px;
+    margin-left: 150%;
+  }
+
+  .description{
+    padding: 0 55px;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .imagen{
+    margin-top: 25%;
+  }
+
+  p{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 650px){
+
+    header .title{
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    header .title{
+        font-size: 30px;
+    }
+}

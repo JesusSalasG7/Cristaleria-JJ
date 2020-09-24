@@ -1,0 +1,221 @@
+* {
+    /* Esto es para especificar las propiedades del ancho y alto */
+    box-sizing: border-box;
+}
+
+/*Esto es para el fuente de la letra de titulo principal y los subtitulos*/
+@font-face{
+    font-family: 'title';
+    src: url(RussoOne-Regular.ttf);
+}
+
+/*Esto es para el tipo de fuente de la descripcion */
+@font-face{
+     font-family: 'description';
+    src: url(Kanit-LightItalic.ttf);
+}
+
+/*Esto es para agragar fondo al resto de la pagina */
+body {
+  background: #DFEFFA;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background: #224ab6;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+   /* width: 90%; */
+    /*max-width: 1000px; */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+header .title{
+    font-family: 'title';
+    font-size: 50px;
+    line-height: 130px;
+    float: left;
+    padding: 2.5%;
+}
+
+.header2 {
+    position: fixed;
+    height: 100px;
+}
+
+.header2 .title{
+    line-height: 100px;
+    font-size: 30px;
+}
+
+#all{
+   /* background: yellow; */
+    width: 100%; 
+    max-width: 1000px;
+    padding: 0 25px;   
+    /*Esto es para centrar los elementos */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/*Esto es para acomodar la fuente de los subtitulos */
+h2 {
+    font-family: 'title';
+    font-size: 30px;
+  }
+
+/*Esto es para acomodar las descripciones de los puntos  */
+.description{
+    width: 100%;
+    padding: 0 30px;
+    font-family: 'description';
+    font-size: 20px;
+    box-sizing: border-box;
+} 
+ 
+/*Esto es para acomodar los numeros de telefono */
+.list{
+    list-style: none;
+    padding-left: 60px; 
+    font-family: 'descripcion';
+    font-size: 20px;
+} 
+
+/*Esto es para acomodar las dimensiones de la ubicacion */
+iframe {
+    width: 500px;
+    height: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* En esta parte esta los estilos de la imagen */
+.contenedor-imagenes {
+    /*Esto espara posicionar las imagenes una de lado de la otra*/ 
+     display: flex; 
+    /*Esto es para dar un centrado*/
+    width: 85%;
+    margin: auto; 
+    /*Esta propiedad define el espacio que el navegador distribuye 
+    y usando el space-around, los items tienen el mismo espacio a su alrededor,
+    es decir que los destribuye uniformemente */
+    justify-content: space-around; 
+    /*Esto es para que quede una imagen abajo de la otra */
+    flex-wrap: wrap; 
+
+    /*Esto es para que nos se vea tan cuadrado el contenedor de las imagenes*/
+   border-radius: 3px; 
+}
+
+/*Esto es para ordenar las imagenes */
+.contenedor-imagenes .imagen{
+    /*Esto es para indicar el espacio de ancho de cada imagen */
+    width: 32%;
+    position: relative; 
+    /*Este es para indicar el espacio que se va a ocupar a lo alto de la imagen */
+    height: 250px;
+    /*Esto es par indicar el espacio del margen por la parte de abajo de cada imagen */
+    margin-bottom: 5px; 
+    /*Este indica la pequeña sombra que forma atras de la de imagen */
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.75);
+}
+
+/*En esta parte ya acomodamos las imagenes solas */
+.imagen img{
+    /*Este indica todo lo que van a ocupar las imagenes dentro de sus contenedores */
+    width: 100%;
+    height: 100%;
+    /*Esto es para que cuadren bien las imagenes, es decir para que no se vean estiradas, si 
+    no que cuadren bien*/
+    object-fit: cover; 
+}
+
+/*Esto es para arreglar las letras de las imagenes */
+.overlay{
+    /*Gracias a esta propiedad se puede visalizar las letras dentro de las imagenes y su fondo */
+    position: absolute; 
+    /*Esto dos valores es para posicionar las letras*/
+    bottom: 0;
+    left: 0;
+    /*El fondo que tendrá las letras*/
+    background: rgba(0, 118, 192, 0.781);
+    /*Este indica lo ancho que ocupara el fondo de las letras*/
+    width: 100%;
+    /*Este indica lo alto*/
+    height: 0;
+    /*Esto es para recortar las letras*/
+    overflow: hidden; 
+    /*Esto nos permite observar la animación de la imagen*/
+    transition: .5s ease; 
+}
+
+/*Esto es para posicionar las letras de las imagenes */
+.overlay h3{
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+/*Esto es para crear la animacion*/
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 450px){
+    .contenedor-imagenes{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #all{
+        width: 100%;
+    }
+
+    header .title{
+        font-size: 25px;
+        
+    }
+
+    h2{
+        font-size: 15px;
+    }
+
+    .description{
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .contenedor-imagenes{
+        width: 98%;
+    }
+
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+
+
+
